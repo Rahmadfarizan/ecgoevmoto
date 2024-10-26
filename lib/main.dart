@@ -23,6 +23,13 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/home', page: () => const HomePage()),
         GetPage(name: '/about', page: () => const AboutPage()),
       ],
+      unknownRoute: GetPage(
+        name: '/notfound',
+        page: () => Scaffold(
+          appBar: AppBar(title: const Text('Page Not Found')),
+          body: const Center(child: Text('404 - Page not found')),
+        ),
+      ),
     );
   }
 }
