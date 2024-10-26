@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
+import '../../widgets/app_bar.dart';
 
-class AboutPage extends StatefulWidget {
+class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
   @override
-  State<AboutPage> createState() => _AboutPageState();
-}
-
-class _AboutPageState extends State<AboutPage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: const Text("About"),
+      appBar: CustomAppBar(),
+      body: const Center(
+        child: Text('This is the About Page.'),
+      ),
     );
   }
 }
